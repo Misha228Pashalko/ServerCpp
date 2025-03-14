@@ -31,7 +31,7 @@ namespace Router {
         for(auto it= range.first; it != range_second; it++){
             throw runtime_error("Dublicate route detected");
         }
-        routes_.emplace(std::string(method), Route{std::regex(pattern.begin(), pattern.end()), handler});
+        routes_.emplace(string(method), Route{regex(pattern.begin(), pattern.end()), handler});
 
     }
     optional<Handler> RouteManager::deispatch(const Request& req, Response &res) const;{
